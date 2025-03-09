@@ -25,4 +25,24 @@ The ERD illustrates that Paccafe's business process consists of:
 4. Employee
    Handle employee records such as: name, hire date, role and email.
 
-Before we start to build the pipeline for paccafe, the first thing to do is to gather all required information to build the data pipeline.
+Before we start to build the pipeline for paccafe, the first thing to do is to gather all required information to build the data pipeline. Imagine you are the data engineers and paccafe is your client, you and paccafe will conduct Q&A question to gather all the information needed. The Q&A bellow is the possible scenario of paccafe requirement gatherings:
+
+**Question 1**: What is the main purpose of creating data pipeline for paccafe?
+
+**Answer**: Our main goals are threefold: First, we want better inventory management to reduce wastage and stockouts. Second, we need deeper customer insights to improve our loyalty program. Third, we want to optimize our staffing based on sales patterns. Overall, we're looking to become more data-driven in our decision-making.
+
+**Question 2**: Could you describe your current data environment? What systems are currently storing the data from your customers, orders, products, and inventory?
+
+**Answer: We're currently using a cloud-based POS system that stores most of our transaction data, but our inventory tracking related to products is partially manual with spreadsheets
+
+**Question 3**: What is the main problem you are facing with the current POS system?
+
+**Answer**: we have obstacle to analyze our data with current system because our data is scattered on some platform. We need to collect our data in single datawarehouse.
+
+**Question 4**: Have you experienced any data quality issues you'd like addressed in the new pipeline? For example, duplicate orders, missing customer information, or inventory discrepancies?
+
+**Question4**: We've had issues with duplicate customer records when people use different emails or phone numbers. Our inventory counts don't always match reality due to manual counting errors or staff not recording product waste properly. We sometimes have orphaned order details if a transaction is voided incorrectly. We also facing that some negative value from our data, especially on cost price and unit price from our products. we need all the data in our data pipeline is a good quality data.
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Based on the requirements gathering process, we will provide solution for paccafe by designing data pipeline for paccafe. 
