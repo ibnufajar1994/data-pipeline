@@ -4,7 +4,7 @@
 <img width="1351" alt="ilustrasi" src="https://github.com/user-attachments/assets/8f998cc4-90a2-4d0d-a196-2401eb757738" />
 
 
-# data-pipeline
+# Data-Pipeline
 Build Data pipeline using python &amp; MinIO
 
 
@@ -25,4 +25,4 @@ The ERD illustrates that Paccafe's business process consists of:
 4. Employee
    Handle employee records such as: name, hire date, role and email.
 
-Before we start to build the pipeline for paccafe, the first thing to do is to gather all required information 
+Before we start to build the pipeline for paccafe, the first thing to do is to gather all required information to build the data pipeline.
