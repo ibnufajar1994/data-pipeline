@@ -45,4 +45,19 @@ Before we start to build the pipeline for paccafe, the first thing to do is to g
 
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-Based on the requirements gathering process, we will provide solution for paccafe by designing data pipeline for paccafe. 
+Based on the requirements gathering process, we will provide solution for paccafe by designing data pipeline for paccafe.  
+
+![ilust](https://github.com/user-attachments/assets/9fffc918-da87-47d1-8c5f-5dc42434a4b6)
+
+This pipeline will involve the following steps:
+- Data Extraction: Extract data from spreadsheets and databases. we will use both full and incremental extraction methods to retrieve data efficiently.
+- Data Load:
+  - Staging: Load raw data into a staging database (PostgreSQL) without transformation.
+  - Final Load: Transfer clean and transformed data to the final destination.
+  - Failure Handling: Log failed data loads to MinIO object storage for reprocessing
+    
+- Data Transformation:
+  - Cleaning: Handle missing values, incorrect data formats, and other data quality issues.
+  - Trasnforming: Add derived fields and calculated metrics as needed.
+    
+- Data Validation: process of checking and ensuring that data meets predefined rules
