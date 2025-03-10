@@ -61,3 +61,14 @@ This pipeline will involve the following steps:
   - Trasnforming: Add derived fields and calculated metrics as needed.
     
 - Data Validation: process of checking and ensuring that data meets predefined rules
+
+Tools and Technologies Using in this project including:
+- Python: build and manage data Pipeline
+- PostgreSQL: act as database for log, staging and final data storage.
+- MinIO: handling failed and invalid data on data loading process
+- Docker: build and Run MinIO
+
+## Source To Target Mapping
+  Source to Target Mapping (S2T) is a crucial document or process in data pipeline design that defines how data from a source system (e.g., a database, API, file, etc.) is transformed and loaded into a target system. When implementing complex data pipelines,Source To Target Mapping  documents often serve as the blueprint for developers and the reference for stakeholders to understand data flows throughout the organization. In this project, we will create the Source To Target Mapping for paccafe data pipeline process as explain bellow:
+
+**A. Loading Data From source database to staging database**
