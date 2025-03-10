@@ -69,6 +69,38 @@ Tools and Technologies Using in this project including:
 - Docker: build and Run MinIO
 
 ## Source To Target Mapping
-  Source to Target Mapping (S2T) is a crucial document or process in data pipeline design that defines how data from a source system (e.g., a database, API, file, etc.) is transformed and loaded into a target system. When implementing complex data pipelines,Source To Target Mapping  documents often serve as the blueprint for developers and the reference for stakeholders to understand data flows throughout the organization. In this project, we will create the Source To Target Mapping for paccafe data pipeline process as explain bellow:
+  Source to Target Mapping (S2T) is a crucial document or process in data pipeline design that defines how data from a source system (e.g., a database, API, file, etc.) is transformed and loaded into a target system. When implementing complex data pipelines,Source To Target Mapping  documents often serve as the blueprint for developers and the reference for stakeholders to understand data flows throughout the organization. The target system schema for paccafe is shown below:
 
-**A. Loading Data From source database to staging database**
+<Details>
+  
+![dwh - public](https://github.com/user-attachments/assets/63cc5e67-74ab-4130-aa04-d1fda5dc341b)
+
+</Details>
+
+
+After identify the target schema, we will evaluate source to target mapping for paccafe as follow:
+
+**Source: Staging**
+
+**Target: Warehouse**
+
+ - Source Table: Customers
+ - Target Table: Dim_Customers
+
+<Details>
+
+ ![image](https://github.com/user-attachments/assets/676993a2-6bf9-4821-8ce2-767b988df1ec)
+
+
+</Details>
+
+
+- Source Table: Emmployees
+- Target Table: Dim_Employees
+
+<Details>
+
+![image](https://github.com/user-attachments/assets/28312bbc-94e2-4cd4-91d6-795e19681432)
+
+
+</Details>
