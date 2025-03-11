@@ -84,8 +84,9 @@ After identify the target schema, we will evaluate source to target mapping for 
 
 **Target: Warehouse**
 
- - Source Table: Customers
- - Target Table: Dim_Customers
+## A. dim_customers table
+ - Source Table: customers
+ - Target Table: dim_customers
 
 <Details>
 
@@ -94,13 +95,45 @@ After identify the target schema, we will evaluate source to target mapping for 
 
 </Details>
 
-
-- Source Table: Emmployees
-- Target Table: Dim_Employees
+## B. dim_employees table
+- Source Table: employees
+- Target Table: dim_employees
 
 <Details>
 
 ![image](https://github.com/user-attachments/assets/28312bbc-94e2-4cd4-91d6-795e19681432)
+
+
+</Details>
+
+## C. dim_store_branch table
+ - Source Table: store_branch
+ - Target Table: dim_store_branch
+
+<Details>
+  
+![image](https://github.com/user-attachments/assets/b66e9469-0f03-4c4e-833f-363bdb3c4756)
+
+
+</Details>
+
+## D. dim_products table
+ - Source Table: products
+ - Target Table: dim_products
+
+<Details>
+
+  ![image](https://github.com/user-attachments/assets/f79f0c34-2a13-47de-aad5-a41b753c2708)
+
+</Details>
+
+## E. fct_inventory table
+ - Source Table: inventory_tracking
+ - Target Table: fct_inventory_tracking
+
+<Details>
+
+![image](https://github.com/user-attachments/assets/55ff8765-afe7-423a-a5a2-8b56466c7ded)
 
 
 </Details>
