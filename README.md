@@ -127,7 +127,7 @@ After identify the target schema, we will evaluate source to target mapping for 
 
 </Details>
 
-## E. fct_inventory table
+## E. fct_inventory_table
  - Source Table: inventory_tracking
  - Target Table: fct_inventory_tracking
 
@@ -135,5 +135,15 @@ After identify the target schema, we will evaluate source to target mapping for 
 
 ![image](https://github.com/user-attachments/assets/55ff8765-afe7-423a-a5a2-8b56466c7ded)
 
+
+</Details>
+
+## F. fct_order
+ - Source Table: orders, order_details
+ - Target Table: fct_order
+
+<Details>
+
+  ![image](https://github.com/user-attachments/assets/a6728c9d-acd9-4fa2-961e-fab7e2d10c78)
 
 </Details>
