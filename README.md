@@ -59,7 +59,8 @@ Before we start to build the pipeline for paccafe, the first thing to do is to g
 **Answer**: We've had issues with duplicate customer records when people use different emails or phone numbers. Our inventory counts don't always match reality due to manual counting errors or staff not recording product waste properly. We sometimes have orphaned order details if a transaction is voided incorrectly. We also facing that some negative value from our data, especially on cost price and unit price from our products. we need all the data in our data pipeline is a good quality data.
 
 **Question 5**: Do you need to store any failed data on your data pipeline process?
-**Answer: Absolutely, we want to store all the failed data in some object storage platforms. This process will help us on debugging and ensure the data quality
+**Answer:** Absolutely, we want to store all the failed data in some object storage platforms. This process will help us on debugging and ensure the data quality
+
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 Based on the requirements gathering process, we will provide solution for paccafe by designing data pipeline for paccafe.  
