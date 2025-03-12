@@ -7,8 +7,22 @@
 # Data-Pipeline
 Build Data pipeline using python &amp; MinIO
 
+## Content
+[1. Overview](#1-overview)  
+[2. Source of Dataset](#2-source-of-dataset)  
+[3. Identify the Data](#3-identify-the-data)  
+[4. Requirements Gathering](#4-requirements-gathering)  
 
-The aim for this project is to demonstrate the data pipeline process using ETL Method. The data set used in this project comes from sales data for a cafe called paccafe on this [repository](https://github.com/Kurikulum-Sekolah-Pacmann/data_pipeline_paccafe/tree/week-4). The first step to do is to identify the data from the given dataset, we will identify the business process by the ERD of paccafe shown on the spoiler bellow:
+
+
+# 1. Overview
+This project streamlines the ETL (Extract, Transform, Load) process by automating data extraction from various sources while maintaining data integrity. It features error logging and stores objects in MinIO object storage. Additionally, it offers a comprehensive overview of the data pipeline, covering data sources, storage destinations, requirement analysis, proposed solutions, and the final pipeline design. 
+
+# 2. Source of Dataset
+The data set used in this project comes from sales data for a cafe called paccafe on this [repository](https://github.com/Kurikulum-Sekolah-Pacmann/data_pipeline_paccafe/tree/week-4). The data set contain postgresql database about POS system of a caffe called paccafe. Another source of dataset that will used in this project is in spreadsheet on this [link](https://docs.google.com/spreadsheets/d/1SRCNk27p78EQAifVZvAWWfUqKgrCyA2AOtFxFw-6fCg/edit?gid=0#gid=0)
+
+# 3. Identify the Data
+The first step to do is to identify the data from the given dataset, we will identify the business process by the ERD of paccafe shown on the spoiler bellow:
 <details>
   
 ![sources - public](https://github.com/user-attachments/assets/16171662-4f61-49ef-a1b5-328914f1eade)
@@ -25,6 +39,7 @@ The ERD illustrates that Paccafe's business process consists of:
 4. Employee
    Handle employee records such as: name, hire date, role and email.
 
+# 4. Requirements Gathering
 Before we start to build the pipeline for paccafe, the first thing to do is to gather all required information to build the data pipeline. Imagine you are the data engineers and paccafe is your client, you and paccafe will conduct Q&A question to gather all the information needed. The Q&A bellow is the possible scenario of paccafe requirement gatherings:
 
 **Question 1**: What is the main purpose of creating data pipeline for paccafe?
@@ -41,8 +56,10 @@ Before we start to build the pipeline for paccafe, the first thing to do is to g
 
 **Question 4**: Have you experienced any data quality issues you'd like addressed in the new pipeline? For example, duplicate orders, missing customer information, or inventory discrepancies?
 
-**Question4**: We've had issues with duplicate customer records when people use different emails or phone numbers. Our inventory counts don't always match reality due to manual counting errors or staff not recording product waste properly. We sometimes have orphaned order details if a transaction is voided incorrectly. We also facing that some negative value from our data, especially on cost price and unit price from our products. we need all the data in our data pipeline is a good quality data.
+**Answer**: We've had issues with duplicate customer records when people use different emails or phone numbers. Our inventory counts don't always match reality due to manual counting errors or staff not recording product waste properly. We sometimes have orphaned order details if a transaction is voided incorrectly. We also facing that some negative value from our data, especially on cost price and unit price from our products. we need all the data in our data pipeline is a good quality data.
 
+**Question 5**: Do you need to store any failed data on your data pipeline process?
+**Answer: Absolutely, we want to store all the failed data in some object storage platforms. This process will help us on debugging and ensure the data quality
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 Based on the requirements gathering process, we will provide solution for paccafe by designing data pipeline for paccafe.  
@@ -147,3 +164,4 @@ After identify the target schema, we will evaluate source to target mapping for 
   ![image](https://github.com/user-attachments/assets/a6728c9d-acd9-4fa2-961e-fab7e2d10c78)
 
 </Details>
+
