@@ -12,6 +12,7 @@ Build Data pipeline using python &amp; MinIO
 [2. Source of Dataset](#2-source-of-dataset)  
 [3. Identify the Data](#3-identify-the-data)  
 [4. Requirements Gathering](#4-requirements-gathering)  
+[5. Source to Target Mapping](#5-source-to-target-mapping) 
 
 
 
@@ -86,7 +87,7 @@ Tools and Technologies Using in this project including:
 - MinIO: handling failed and invalid data on data loading process
 - Docker: build and Run MinIO
 
-## Source To Target Mapping
+# 5. Source To Target Mapping
   Source to Target Mapping (S2T) is a crucial document or process in data pipeline design that defines how data from a source system (e.g., a database, API, file, etc.) is transformed and loaded into a target system. When implementing complex data pipelines,Source To Target Mapping  documents often serve as the blueprint for developers and the reference for stakeholders to understand data flows throughout the organization. The target system schema for paccafe is shown below:
 
 <Details>
@@ -166,3 +167,40 @@ After identify the target schema, we will evaluate source to target mapping for 
 
 </Details>
 
+To maintain the data quality, we need to do data validation after some transformation. This process will ensure all data that put on the warehouse is clean and have good quality, the pipeline will maintain the data integrity.
+The data validation rule including:
+
+## 1. dim_customers
+<Details>
+  
+  ![image](https://github.com/user-attachments/assets/cad9ea0e-3d14-40ff-ba9a-2b24d735ffea)
+
+</Details>
+
+## 2. dim_employees
+<Details>
+
+  ![image](https://github.com/user-attachments/assets/9aeafcaa-f70b-40d0-abd3-c10a61960ee7)
+
+</Details>
+
+## 3. dim_products
+<Details>
+
+  ![image](https://github.com/user-attachments/assets/6e7af846-211e-46fb-adff-48c4b7d3f9dc)
+
+</Details>
+
+## 4. fct_inventory
+<Details>
+
+  ![image](https://github.com/user-attachments/assets/42ce6fbb-ffb1-4818-84dc-82c96f86093f)
+
+</Details>
+
+## 5. fct_orders
+<Details>
+
+![image](https://github.com/user-attachments/assets/841c96f8-1832-46fa-8388-bf76d45abce8)
+  
+</Details>
