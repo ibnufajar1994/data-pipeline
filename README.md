@@ -13,7 +13,10 @@ Build Data pipeline using python &amp; MinIO
 [3. Identify the Data](#3-identify-the-data)  
 [4. Requirements Gathering](#4-requirements-gathering)  
 [5. Source to Target Mapping](#5-source-to-target-mapping)  
-[6. Validation Rule](#6-validation-rule)
+[6. Validation Rule](#6-validation-rule)  
+[7. How to Use This Project](#7-how-to-use-this-project)
+   - [Preparations](#71-preparations)
+   - [Running the Pipeline](#72-running-the-pipeline)
 
 
 
@@ -206,3 +209,65 @@ The data validation rule including:
 ![image](https://github.com/user-attachments/assets/841c96f8-1832-46fa-8388-bf76d45abce8)
   
 </Details>
+
+# 7. How to Use This Project
+## 7.1 Preparations
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/ibnufajar1994/data-pipeline.git
+   ```
+2. **Clone the spreadsheet:**
+   **[Duplicate Spreadsheet](https://docs.google.com/spreadsheets/d/1kNHT10oy2w-I4AGxWHhBHSxo0vrVchBqxAe6e53xfi4/edit?usp=drive_link)**
+
+4. **Set up the environment variables (`.env` file):**
+   ```env
+   # PostgreSQL Credentials
+   SRC_POSTGRES_DB=...
+   SRC_POSTGRES_HOST=...
+   SRC_POSTGRES_USER=...
+   SRC_POSTGRES_PASSWORD=...
+   SRC_POSTGRES_PORT=...
+
+   STG_POSTGRES_DB=paccafe_stg
+   STG_POSTGRES_HOST=...
+   STG_POSTGRES_USER=...
+   STG_POSTGRES_PASSWORD=...
+   STG_POSTGRES_PORT=...
+
+   WH_POSTGRES_DB=paccafe_dwh
+   WH_POSTGRES_HOST=...
+   WH_POSTGRES_USER=...
+   WH_POSTGRES_PASSWORD=...
+   WH_POSTGRES_PORT=...
+
+   LOG_POSTGRES_DB=paccafe_log
+   LOG_POSTGRES_HOST=...
+   LOG_POSTGRES_USER=...
+   LOG_POSTGRES_PASSWORD=...
+   LOG_POSTGRES_PORT=...
+
+   # MinIO Credentials
+   MINIO_ACCESS_KEY=...
+   MINIO_SECRET_KEY=...
+
+   # Model Path
+   MODEL_PATH=...
+   
+   # Google Spreadsheet Credentials
+   CRED_PATH='YOUR_PATH/.credentials/pipeline-paccafe.json'
+   KEY_CATEGORY="place_your_spreadsheet_key_here"
+   ```
+5. Save your API Key on ./credentials 
+
+   
+## 7.2 Running the Pipeline
+Start all services:
+```bash
+docker compose up -d
+```
+
+Restart services (if needed):
+```bash
+docker compose down --volumes && docker compose up -d
+```
+
