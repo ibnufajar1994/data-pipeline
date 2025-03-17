@@ -12,7 +12,8 @@ Build Data pipeline using python &amp; MinIO
 [2. Source of Dataset](#2-source-of-dataset)  
 [3. Identify the Data](#3-identify-the-data)  
 [4. Requirements Gathering](#4-requirements-gathering)  
-[5. Source to Target Mapping](#5-source-to-target-mapping) 
+[5. Source to Target Mapping](#5-source-to-target-mapping)  
+[6. Validation Rule](#6-validation-rule)
 
 
 
@@ -167,6 +168,7 @@ After identify the target schema, we will evaluate source to target mapping for 
 
 </Details>
 
+# 6. Validation Rule
 To maintain the data quality, we need to do data validation after some transformation. This process will ensure all data that put on the warehouse is clean and have good quality, the pipeline will maintain the data integrity.
 The data validation rule including:
 
